@@ -1,7 +1,22 @@
-answer = input("Hello! What do you want?")
+
+tasks = {}
 
 def add_task(task, title):
-    return
+    tasks[title] = task
 
 def show_tasks(tasks):
-    return
+    print(tasks)
+
+while True:
+    answer = input("Hello! What do you want? 1(Add task), 2(Show tasks) or 3(Exit): ")
+    
+    if answer == "1":
+        task = input("Task: ")
+        title = input("Title: ")
+        add_task(task, title)
+    elif answer == "2":
+        show_tasks(tasks)
+    elif answer == "3":
+        break
+    else:
+        print("error")
