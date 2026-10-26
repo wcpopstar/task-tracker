@@ -13,6 +13,12 @@ while True:
     if answer == "1":
         task = input("Task: ")
         title = input("Title: ")
+        while True:
+            if title in tasks:
+                print("This title already taken")
+                title = input("Title: ")
+            else:
+                break
         add_task(task, title)
     elif answer == "2":
         show_tasks(tasks)
