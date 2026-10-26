@@ -1,11 +1,18 @@
 
 tasks = {}
 
+
 def add_task(task, title):
     tasks[title] = task
 
 def show_tasks(tasks):
-    print(tasks)
+    number = 0
+    if tasks:
+        for title, task in tasks.items():
+            number += 1
+            print(f"{number} {title} {task}")
+    else:
+        print("No tasks")
 
 while True:
     answer = input("Hello! What do you want? 1(Add task), 2(Show tasks) or 3(Exit): ")
